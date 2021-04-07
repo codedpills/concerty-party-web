@@ -12,4 +12,7 @@ We seek to:
 - Explore and experience the greatest music on earth, and share our discoveries with you.
 - Expose music of true substance and character, and promote it everywhere.
 
+![company](../../images/company/duy-pham-Cecb0_8Hx-o-unsplash.jpg)
+
 Established in 2020, Concert Party is the premier destination online for fans of live music. By providing the largest database of show listings and ticket information, authoritative content and personalization tools for fans, Concert Party connects music fans with the music shows they love and empowers them to go see live music concerts. Originally founded by fans for fans, Concert Party quickly evolved to serve all lovers of live music, while providing a platform for musicians to be discovered. Today, more than 500,000 people participate in the Concert Party community every month and rely on our website to find the most accurate show listings available for more than 45,000 artists across 50 genres, performing in over 65,000 venues worldwide
+
