@@ -1,6 +1,6 @@
-```
-Title: Why Concert Party
-```
+---
+title: Why Concert Party
+---
 
 Concert Party is a global community connecting music and show lovers to the most amazing
 concerts around the world. We are deeply committed to supporting and growing the live music community. We believe live music changes the world and are dedicated to channeling its power into positive social and environmental action.
