@@ -10,6 +10,7 @@ const WhyConcertParty = () => {
         frontmatter {
           title
         }
+        html
       }
     }
   `)
@@ -19,18 +20,7 @@ const WhyConcertParty = () => {
   return (
     <div className="why-concert-party">
       <h4>{data.markdownRemark.frontmatter.title}</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nemo
-        voluptas officia pariatur molestiae iusto est dolores consequatur
-        expedita eveniet porro saepe, consectetur libero nobis assumenda facilis
-        magnam dicta natus!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nemo
-        voluptas officia pariatur molestiae iusto est dolores consequatur
-        expedita eveniet porro saepe, consectetur libero nobis assumenda facilis
-        magnam dicta natus!
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
       <img src={img} alt="img" className="img-fluid" />
     </div>
   )
