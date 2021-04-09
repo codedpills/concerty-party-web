@@ -5,8 +5,22 @@ const FindUs = () => {
   return (
     <div className="find-us">
       <h4>Find Us</h4>
-      <div className="map"></div>
+      <div className="location">
+        <h5>Location</h5>
+        <ul>
+            <li>One Airport Square</li>
+            <li>Accra, Ghana</li>
+        </ul>
+      </div>
+      <div className="phone">
+        <h5>Phone</h5>
+        <ul>
+            <li>+233 409 3443 3414</li>
+            <li>+233 409 3443 3412</li>
+        </ul>
+      </div>
       <div className="socials">
+        <h5>Socials</h5>
         <ul>
           <li>
             <a href="">
