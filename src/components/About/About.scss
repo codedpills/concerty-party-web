@@ -9,13 +9,18 @@
 
 .find-us {
   .socials {
+    margin-top: 2rem;
     ul {
       padding-inline-start: 1rem;
       li {
-        line-height: 2rem;
         list-style: none;
+        line-height: 2rem;
         a {
           text-decoration: none;
+          color: #222529;
+          &:hover {
+            color: lighten(purple, 10%);
+          }
         }
       }
     }
