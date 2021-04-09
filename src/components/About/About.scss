@@ -8,6 +8,26 @@
 }
 
 .find-us {
+  .location {
+    margin-top: 1rem;
+    ul {
+      padding-inline-start: 1rem;
+      li {
+        list-style: none;
+        line-height: 2rem;
+      }
+    }
+  }
+  .phone {
+    margin-top: 1rem;
+    ul {
+      padding-inline-start: 1rem;
+      li {
+        list-style: none;
+        line-height: 2rem;
+      }
+    }
+  }
   .socials {
     margin-top: 2rem;
     ul {
