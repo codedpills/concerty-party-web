@@ -6,7 +6,7 @@ import Concert from "./Concert"
 const FeaturedConcerts = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulFeaturedconcerts {
+      allContentfulFeaturedconcerts(sort: { fields: createdAt }) {
         edges {
           node {
             id
@@ -28,7 +28,7 @@ const FeaturedConcerts = () => {
     }
   `)
 
-  const concerts = data.allContentfulFeaturedconcerts.edges;
+  const concerts = data.allContentfulFeaturedconcerts.edges
 
   const featuredConcerts = concerts.map(concert => {
     const details = {
@@ -50,7 +50,7 @@ const FeaturedConcerts = () => {
     <div className="featured-concerts">
       <div className="container">
         <h4>Featured Concerts</h4>
-        <br/>
+        <br />
         <div className="row">{featuredConcerts}</div>
       </div>
     </div>
