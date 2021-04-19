@@ -1,3 +1,5 @@
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -31,11 +33,11 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               linkImagesToOriginal: false,
-              maxWidth: 700
-            }
-          }
-        ]
-      }
+              maxWidth: 700,
+            },
+          },
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
