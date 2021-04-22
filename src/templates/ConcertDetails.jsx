@@ -1,8 +1,11 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 
-const ConcertDetails = () => {
+const ConcertDetails = ({ data }) => {
+  const concertDetails = data.contentfulFeaturedconcerts
+
   return (
     <Layout>
       <div className="container mt-4 mb-4">
@@ -10,19 +13,16 @@ const ConcertDetails = () => {
           <div className="col-md-6 offset-md-3">
             <div>
               <img
-                src="http://images.ctfassets.net/31j9n2ecqpzj/3DXbugxQ1D8ofHAZcfoeq6/a6013daf18635515cd6a079eea63aac7/anthony-delanoix-hzgs56Ze49s-unsplash.jpg"
-                alt="concert"
+                src={concertDetails.image.file.url}
+                alt={concertDetails.name}
                 className="img-fluid"
               />
               <hr />
-              <p>Date: Nov 20</p>
-              <h3>All The Little Lights</h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In ea,
-                dolore alias et fugiat iste, nostrum aut explicabo eveniet ipsa
-                laborum inventore voluptas soluta sit nam autem, exercitationem
-                molestiae libero.
+                Date: {concertDetails.month} {concertDetails.day}
               </p>
+              <h3>{concertDetails.name}</h3>
+              <p>{concertDetails.description.description}</p>
             </div>
           </div>
         </div>
@@ -32,3 +32,22 @@ const ConcertDetails = () => {
 }
 
 export default ConcertDetails
+
+// An alternative way to query data
+export const concertDetails = graphql`
+  query($slug: String!) {
+    contentfulFeaturedconcerts(slug: { eq: $slug }) {
+      name
+      day
+      month
+      description {
+        description
+      }
+      image {
+        file {
+          url
+        }
+      }
+    }
+  }
+`
