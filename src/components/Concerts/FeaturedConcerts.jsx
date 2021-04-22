@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 import Concert from "./Concert"
 
@@ -41,7 +41,9 @@ const FeaturedConcerts = () => {
     }
     return (
       <div className="col-md-4" key={concert.node.id}>
-        <Concert concertDetails={details} />
+        <Link to={`/concerts/${concert.node.slug}`}>
+          <Concert concertDetails={details} />
+        </Link>
       </div>
     )
   })
