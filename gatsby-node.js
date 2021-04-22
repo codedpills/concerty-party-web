@@ -1,6 +1,6 @@
 const path = require("path")
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const concertDetailsTemplate = path.resolve(
     `./src/templates/ConcertDetails.jsx`
   )
@@ -18,7 +18,14 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  console.log("result", result)
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+  if (!result.data.allContentfulFeaturedconcerts) {
+    return
+  }
 
   // create pages for each concert
   const concerts = result.data.allContentfulFeaturedconcerts.edges
