@@ -18,7 +18,7 @@ const LoginWrapper = () => {
             <div className="form-area">
               <h4 className="text-center mb-4">Hello, old friend. Sign in</h4>
               <br />
-              Form here
+              <LoginForm />
             </div>
           </div>
         </div>
