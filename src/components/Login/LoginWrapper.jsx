@@ -2,6 +2,8 @@ import React from "react"
 
 import "./login.scss"
 
+import LoginForm from "./LoginForm"
+
 const LoginWrapper = () => {
   return (
     <div className="login-wrapper">
