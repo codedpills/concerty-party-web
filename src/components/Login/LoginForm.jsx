@@ -4,7 +4,6 @@ const LoginForm = () => {
   const handleLogin = e => {
     e.preventDefault()
     console.log("Login successful")
-    e.target
   }
 
   return (
