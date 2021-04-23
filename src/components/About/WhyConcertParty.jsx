@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const WhyConcertParty = () => {
   const data = useStaticQuery(graphql`
     query {
-      markdownRemark {
+      markdownRemark(frontmatter: { title: { eq: "Why Concert Party" } }) {
         frontmatter {
           title
         }
