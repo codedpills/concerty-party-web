@@ -41,7 +41,7 @@ const FeaturedConcerts = () => {
     }
     return (
       <div className="col-md-4" key={concert.node.id}>
-        <Link to={`/concerts/${concert.node.slug}`}>
+        <Link to={`/concerts/${concert.node.slug}`} className="concert-link">
           <Concert concertDetails={details} />
         </Link>
       </div>
