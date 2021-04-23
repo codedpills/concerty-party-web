@@ -2,13 +2,11 @@ import React from "react"
 
 import "./login.scss"
 
-import LoginForm from "./LoginForm"
-
 const LoginWrapper = () => {
   return (
     <div className="login-wrapper">
       <div className="row no-gutters">
-        <div className="col-4">bg image</div>
+        <div className="col-5">bg image</div>
         <div className="col">
           <div className="login-form-section">
             <div className="logo-area">
