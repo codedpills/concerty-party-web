@@ -2,6 +2,8 @@ import React from "react"
 
 import "./login.scss"
 
+import LoginForm from "./LoginForm"
+
 const LoginWrapper = () => {
   return (
     <div className="login-wrapper">
@@ -14,7 +16,9 @@ const LoginWrapper = () => {
               <span className="logo-party">Party</span>
             </div>
             <div className="form-area">
-                <h4>Hello, old friend. Sign in</h4>
+              <h4 className="text-center mb-4">Hello, old friend. Sign in</h4>
+              <br />
+              Form here
             </div>
           </div>
         </div>
