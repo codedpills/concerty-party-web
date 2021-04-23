@@ -3,9 +3,10 @@
 
   .login-form-section {
     padding: 4rem;
-    text-align: center;
 
     .logo-area {
+      text-align: center;
+
       .logo-concert {
         color: lighten(purple, 10%);
         font-size: 2rem;
@@ -17,7 +18,7 @@
     }
 
     .form-area {
-        margin-top: 2rem;
+      margin-top: 2rem;
     }
   }
 }
