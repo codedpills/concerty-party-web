@@ -1,4 +1,12 @@
 .dashboard {
-    padding: 2rem;
-    min-height: 80vh;
+  padding: 2rem;
+  min-height: 80vh;
+
+  .upcoming {
+    margin: 2rem 0;
+  }
+
+  .booked {
+    margin: 2rem 0;
+  }
 }
