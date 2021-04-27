@@ -15,7 +15,7 @@ const Dashboard = () => {
       url:
         "https://api.predicthq.com/v1/events/?category=concerts&country=us&limit=10",
       headers: {
-        Authorization: "Bearer anP3BR8aRyK58bGlcWlQ7-1yQ5IqU5KgmE3sNjmF",
+        Authorization: `Bearer ${process.env.GATSBY_API_TOKEN}`,
       },
     })
       .then(res => {
@@ -25,6 +25,7 @@ const Dashboard = () => {
       .catch(err => console.log(err))
   }, [])
   console.log("state", concerts)
+
   return (
     <div className="dashboard shadow p-3 mb-5 bg-white rounded">
       <div className="container">
