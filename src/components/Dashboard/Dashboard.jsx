@@ -48,7 +48,7 @@ const Dashboard = () => {
   } else if (requesting === false && concerts.length === 0) {
     myConcerts = <p>Nothing to see.</p>
   } else {
-    myConcerts = <p>Loading...</p>
+    myConcerts = <h5 className="text-center">Loading...</h5>
   }
 
   return (
