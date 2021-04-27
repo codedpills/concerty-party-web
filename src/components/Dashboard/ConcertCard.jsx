@@ -1,11 +1,12 @@
 import React from "react"
+import Moment from "react-moment"
 
 const ConcertCard = ({
   concertInfo = {
     title: "Title",
     venue: "Venue",
-    startDate: "12th July",
-    endDate: "22nd July",
+    startDate: "2021-05-26T23:30:00Z",
+    endDate: "2021-05-26T23:30:00Z",
     tags: ["concert", "music"],
   },
 }) => {
@@ -15,7 +16,13 @@ const ConcertCard = ({
       <ul>
         <li>{concertInfo.venue}</li>
         <li>
-          {concertInfo.startDate} to {concertInfo.endDate}
+          <small>
+            <Moment format="D MMM YYYY">{concertInfo.startDate}</Moment>
+          </small>
+          &nbsp; to &nbsp;
+          <small>
+            <Moment format="D MMM YYYY">{concertInfo.endDate}</Moment>
+          </small>
         </li>
       </ul>
       <hr />
