@@ -6,7 +6,22 @@ import Container from "react-bootstrap/Container"
 
 import "./mainNavbar.scss"
 
-const MainNavbar = () => {
+const MainNavbar = ({ auth }) => {
+  const authLink = auth ? (
+    <>
+      <Link to="/login" className="nav-link">
+        {" "}
+        Logout{" "}
+      </Link>
+    </>
+  ) : (
+    <>
+      <Link to="/login" className="nav-link">
+        {" "}
+        Login{" "}
+      </Link>
+    </>
+  )
   return (
     <Navbar bg="light" expand="lg" className="main-navbar">
       <Container>
@@ -21,10 +36,7 @@ const MainNavbar = () => {
               {" "}
               Featured concerts{" "}
             </Link>
-            <Link to="/login" className="nav-link">
-              {" "}
-              Login{" "}
-            </Link>
+            {authLink}
           </Nav>
         </Navbar.Collapse>
       </Container>

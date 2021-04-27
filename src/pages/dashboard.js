@@ -6,7 +6,7 @@ import Profile from "../components/Profile/Profile"
 
 const dashboard = () => {
   return (
-    <Layout>
+    <Layout auth={true}>
       <div className="container mt-4 mb-4">
         <div className="row">
           <div className="col-3">
