@@ -13,7 +13,7 @@ const Dashboard = () => {
     axios({
       method: "get",
       url:
-        "https://api.predicthq.com/v1/events/?category=concerts&country=us&limit=20",
+        "https://api.predicthq.com/v1/events/?category=concerts&country=us&limit=10",
       headers: {
         Authorization: "Bearer anP3BR8aRyK58bGlcWlQ7-1yQ5IqU5KgmE3sNjmF",
       },
